@@ -66,6 +66,8 @@ Worked at the United Nations Office on Drugs & Crime (Vienna) on anti-corruption
 
 PROJECTS & INTERESTS
 I enjoy evangelising for upskilling/reskilling and continuous learning as a way to grow personally and professionally via my podcast. I also love music, guitars, public speaking, philosophy, business history, biographies, dogs, camping.
+I run a youtube and spotify podcast called "easier said than done" which focuses on career change, career growth, self development and software engineering.
+I also post regularly on LinkedIn and publish on FreeCodeCamp.
 
 OTHER EDUCATION
 Global Executive MBA, 2016 : IE Business School, Madrid.

@@ -35,8 +35,8 @@ async def handle_new_call(system: VoiceAgentSystem, call_request: CallRequest):
 
     await system.start()
     await system.send_initial_message(
-        """Hello! I am Zubin's voice clone. 
-        I can answer questions about my <break time="80ms"/> (meaning Zubin's)  <break time="60ms"/> work history and resumé. 
+        """Hello! I am Zubin's AI voice clone. 
+        I can answer questions about my work history and resumé. 
         What would you like to know?"""
     )
     await system.wait_for_shutdown()
