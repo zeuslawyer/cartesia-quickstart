@@ -14,7 +14,7 @@ else:
     gemini_client = None
 
 
-async def handle_new_call(system: VoiceAgentSystem, call_request: CallRequest):
+async def call_handler(system: VoiceAgentSystem, call_request: CallRequest):
     # Main conversation node
     conversation_node = ChatNode(
         system_prompt=SYSTEM_PROMPT,
@@ -24,7 +24,8 @@ async def handle_new_call(system: VoiceAgentSystem, call_request: CallRequest):
     conversation_bridge = Bridge(conversation_node)
     system.with_speaking_node(conversation_node, bridge=conversation_bridge)
 
-    conversation_bridge.on(UserTranscriptionReceived).map(conversation_node.add_event)
+    conversation_bridge.on(UserTranscriptionReceived).map(
+        conversation_node.add_event)
 
     (
         conversation_bridge.on(UserStoppedSpeaking)
@@ -42,7 +43,7 @@ async def handle_new_call(system: VoiceAgentSystem, call_request: CallRequest):
     await system.wait_for_shutdown()
 
 
-app = VoiceAgentApp(handle_new_call)
+app = VoiceAgentApp(call_handler)
 
 if __name__ == "__main__":
     app.run()
