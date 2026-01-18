@@ -1,6 +1,6 @@
 [project]
 name = "meet_zubin"
-version = "0.1.0"
+version = "0.1.1"
 description = "Single system prompt voice agent that uses Gemini 2.5 Flash"
 requires-python = ">=3.10"
 dependencies = [
